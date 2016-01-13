@@ -4,7 +4,7 @@ jQuery( function( $ ) {
 	$( '#main' ).on( 'click', 'div.load-more a', function( e ) {
 		e.preventDefault();
 		var slotName = 'ajax_leaderboard_' + slot_num++;
-		$( '#main .posts-wrapper' ).append( $( '<div />' ).attr( 'id', slotName ) );
+		$( '#main .posts-wrapper' ).append( $( '<div />' ).attr( 'id', adLayersDFP.adUnitPrefix + slotName ) );
 		var api = new AdLayersAPI();
 		api.lazyLoadAd( { slotName: slotName, format: 'sidebar' } );
 	} );
